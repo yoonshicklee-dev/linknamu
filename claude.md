@@ -8,7 +8,7 @@ Linktree처럼 내 모든 링크를 한 페이지에 모아두고
 ##기술스택
 - Next.js 16 (App Router)
 - Tailwind CSS
-- MongoDB Atlaㄴ (클릭 수 저장)
+- MongoDB Atlas (클릭 수 저장)
 - vercel (배포)
 
 #주요 기능
@@ -19,5 +19,5 @@ Linktree처럼 내 모든 링크를 한 페이지에 모아두고
 ##코드 규칙
 - TypeScript 사용
 - 컴포넌트는 src/components/ 아래에 작성
-- 환경 변수는 .env.local 에 저장(절대 커밋하지 안흠)
+- 환경 변수는 .env.local 에 저장(절대 커밋하지 않음)
 - 모바일 우선 반응형 디자인

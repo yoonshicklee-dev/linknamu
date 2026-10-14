@@ -8,17 +8,17 @@ type ProfileHeaderProps = {
 
 export default function ProfileHeader({ name, bio, imageUrl }: ProfileHeaderProps) {
   return (
-    <header className="flex flex-col items-center gap-3 text-center">
+    <header className="flex flex-col items-center text-center">
       <Image
         src={imageUrl}
         alt={`${name} 프로필 사진`}
-        width={96}
-        height={96}
+        width={112}
+        height={112}
         priority
-        className="h-24 w-24 rounded-full border-2 border-foreground/10 object-cover"
+        className="h-28 w-28 rounded-full object-cover ring-4 ring-(--avatar-ring) shadow-(--avatar-shadow)"
       />
-      <h1 className="mt-2 text-xl font-semibold">{name}</h1>
-      <p className="text-sm text-foreground/70">{bio}</p>
+      <h1 className="mt-6 text-2xl font-semibold tracking-tight">{name}</h1>
+      <p className="mt-2 text-[15px] leading-relaxed text-muted">{bio}</p>
     </header>
   );
 }

@@ -15,7 +15,7 @@ export type Profile = {
 export const profile: Profile = {
   name: "이윤식",
   bio: "바이브 코딩 중",
-  imageUrl: "/profile-placeholder.svg",
+  imageUrl: "/profile.jpg",
   links: [
     { id: "github", title: "GitHub", url: "https://github.com" },
     { id: "linkedin", title: "LinkedIn", url: "https://www.linkedin.com" },

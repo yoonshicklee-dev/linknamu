@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --foreground: #3a2c25;
+  --muted: #8a7368;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* 크림 → 연한 살구 */
+  --bg-from: #fdf9f3;
+  --bg-to: #f9e1cf;
+  --bg-glow-1: rgba(255, 196, 160, 0.45);
+  --bg-glow-2: rgba(255, 236, 214, 0.9);
+
+  --card-bg: rgba(255, 255, 255, 0.42);
+  --card-bg-hover: rgba(255, 255, 255, 0.6);
+  --card-border: rgba(255, 255, 255, 0.7);
+  --card-shadow: 0 1px 2px rgba(120, 72, 40, 0.06), 0 8px 24px -12px rgba(120, 72, 40, 0.18);
+  --card-shadow-hover: 0 1px 2px rgba(120, 72, 40, 0.08), 0 14px 32px -14px rgba(120, 72, 40, 0.26);
+
+  --avatar-ring: rgba(255, 255, 255, 0.85);
+  --avatar-shadow: 0 2px 4px rgba(120, 72, 40, 0.08), 0 16px 36px -12px rgba(120, 72, 40, 0.35);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #f4e9e0;
+    --muted: #b49f93;
+
+    --bg-from: #1d1714;
+    --bg-to: #33241c;
+    --bg-glow-1: rgba(214, 128, 84, 0.18);
+    --bg-glow-2: rgba(255, 220, 190, 0.05);
+
+    --card-bg: rgba(255, 255, 255, 0.06);
+    --card-bg-hover: rgba(255, 255, 255, 0.1);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 24px -12px rgba(0, 0, 0, 0.5);
+    --card-shadow-hover: 0 1px 2px rgba(0, 0, 0, 0.25), 0 14px 32px -14px rgba(0, 0, 0, 0.6);
+
+    --avatar-ring: rgba(255, 255, 255, 0.12);
+    --avatar-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 16px 36px -12px rgba(0, 0, 0, 0.7);
   }
 }
 
+@theme inline {
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-pretendard), -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-from);
+  background-image:
+    radial-gradient(60% 45% at 85% 100%, var(--bg-glow-1), transparent 70%),
+    radial-gradient(55% 40% at 10% 0%, var(--bg-glow-2), transparent 70%),
+    linear-gradient(165deg, var(--bg-from) 0%, var(--bg-to) 100%);
+  background-attachment: fixed;
+  word-break: keep-all;
 }
